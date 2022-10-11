@@ -1,0 +1,33 @@
+.projects__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.projects-item {
+  position: relative;
+}
+
+.projects__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  line-height: 1.1;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--main-light-color);
+}
+
+// приховує версію для ПК
+@media screen and (max-width: 1200px) {
+  .projects {
+    display: none;
+  }
+}

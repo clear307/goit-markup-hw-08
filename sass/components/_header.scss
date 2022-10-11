@@ -1,0 +1,144 @@
+@media screen and (max-width: 768px) {
+  .menu-list__link {
+    display: none;
+  }
+
+  .contacts-list {
+    display: none;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .header__btn {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  color: var(--current-color);
+  padding-top: 24px;
+  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.header {
+  border-bottom: 1px solid var(--header-border);
+}
+
+.logo--black {
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  color: var(--main-color);
+  transition: color var(--transition-dur-and-func);
+}
+
+@media screen and (min-width: 768px) {
+  .header__btn {
+    display: none;
+  }
+
+  .menu-list {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    margin-left: 94px;
+  }
+
+  .contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header__container {
+    display: flex;
+  }
+
+  .contacts-list__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    color: var(--secondary-color);
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    
+    fill: currentColor;
+    transition: color var(--transition-dur-and-func);
+
+    &:hover,
+    &:focus {
+      color: var(--current-color);
+    }
+  }
+
+  .contacts-list__icon {
+    margin-right: 10px;
+  }
+
+  .menu-list__link {
+    position: relative;
+
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
+    transition: color var(--transition-dur-and-func);
+
+    &:hover,
+    &:focus {
+      background-color: var(--current-color);
+      color: var(--current-color);
+
+      background-color: var(--main-light-color);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .contacts-list {
+      flex-direction: row;
+    }
+    .contacts-list .contacts-list__item + .contacts-list__item {
+      margin-left: 50px;
+    }
+  }
+
+  .current-link::before {
+    position: absolute;
+
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--current-color);
+    border-radius: 2px;
+  }
+
+  .current-link {
+    color: var(--current-color);
+  }
+}

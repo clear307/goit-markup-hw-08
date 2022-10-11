@@ -1,0 +1,49 @@
+.section-team {
+  background-color: var(--button-color);
+}
+
+.img-tile {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1;
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+
+.foto-paragraph {
+  font-size: 16px;
+  line-height: 1.1;
+  color: var(--secondary-color);
+  margin-bottom: 16px;
+}
+
+.tim-item {
+  background: var(--main-light-color);
+
+  box-shadow: 0px 1px 3px var(--box-shadow-item-12), 0px 1px 1px var(--box-shadow-item-14),
+    0px 2px 1px var(--box-shadow-item-02);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.cards-team-box {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.cards-team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .cards-team {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cards-team {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}

@@ -1,0 +1,85 @@
+.social-list {
+  display: flex;
+  column-gap: 10px;
+}
+
+.link-social-network {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-color: var(--main-light-color);
+  color: var(--icon-social-network);
+  transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
+
+  &:hover,
+  &:focus {
+    background-color: var(--current-color);
+    color: var(--main-light-color);
+  }
+}
+
+.cards-social-network {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.social-list {
+  display: flex;
+  column-gap: 10px;
+}
+
+.footer-social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-color: var(--footer-social-list);
+  transition: background-color var(--transition-dur-and-func);
+
+  &:hover,
+  &:focus {
+    background-color: var(--current-color);
+  }
+}
+
+.social-list__icon--ident-color {
+  height: 20px;
+  width: 20px;
+  fill: var(--footer-icon-social);
+}
+
+/* Hover footer address  */
+
+/* =============Footer Form============= */
+
+.box-footer-submit {
+  margin-left: auto;
+}
+
+.icon-social-network {
+  height: 20px;
+  width: 20px;
+  fill: currentColor;
+}
+
+.form-checkbox-policy {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--secondary-color);
+}
+
+.contact-form-field {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contact-form-field-comment {
+  display: block;
+  margin-bottom: 20px;
+}

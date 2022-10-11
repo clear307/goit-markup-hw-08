@@ -1,0 +1,21 @@
+@import './utils/variables';
+@import './utils/visually-hidden';
+@import './utils/mixins';
+@import './utils/placeholders';
+
+@import './base/common.scss';
+@import './base/section';
+@import './base/container';
+
+@import './layout/section-icom-company.scss';
+@import './layout/hero';
+@import './layout/section-benefits';
+@import './layout/section-total';
+@import './layout/section-team';
+@import './layout/modal';
+@import './layout/portfolio';
+
+@import './components/link-social-network';
+@import './components/header';
+@import './components/footer';
+@import './components/mobile-menu';

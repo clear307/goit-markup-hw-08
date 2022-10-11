@@ -1,0 +1,217 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity var(--transition-dur-and-func), visibility var(--transition-dur-and-func);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 609px;
+  background-color: var(--main-light-color);
+}
+
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 320px;
+  }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  transition: var(--transition-dur-and-func);
+
+  &:hover,
+  &:focus {
+    fill: var(--current-color);
+  }
+}
+
+.modal-form-title {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main-color);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-form-input-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: var(--transition-dur-and-func);
+
+  .contact-form-input:hover + &,
+  .contact-form-input:focus + & {
+    fill: var(--current-color);
+  }
+}
+
+.form-checkbox-icon {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--complementary-2-color);
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 8px;
+
+  .contact-form-check:checked + & {
+    background-color: var(--current-color);
+    border: var(--current-color);
+  }
+
+  .contact-form-check:focus + & {
+    box-shadow: 0 0 0 2px var(--current-color);
+  }
+}
+
+.form-checkbox-won-icon {
+  display: none;
+  fill: var(--main-light-color);
+
+  .contact-form-check:checked + .form-checkbox-icon & {
+    display: block;
+  }
+}
+
+.form-checkbox-link {
+  color: var(--current-color);
+  text-decoration-line: underline;
+  font-size: 12px;
+}
+
+.contact-form-check-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form-input {
+  display: block;
+  /* margin-bottom: 10px; */
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--contact-form-input-border);
+  border-radius: 4px;
+  padding-left: 42px;
+  transition: var(--transition-dur-and-func);
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: var(--current-color);
+  }
+}
+
+.contact-form-massage {
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border: 1px solid var(--contact-form-input-border);
+  border-radius: 4px;
+  transition: var(--transition-dur-and-func);
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    color: var(--form-massage-placeholder);
+  }
+
+  &:focus,
+  &:hover {
+    outline: none;
+    border-color: var(--current-color);
+  }
+}
+
+.contact-form-btn {
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+  background-color: var(--current-color);
+  color: var(--main-light-color);
+  border-radius: 4px;
+  padding: 10px 52px;
+  transition: var(--transition-dur-and-func);
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-hero-bg-color);
+    box-shadow: 0px 4px 4px var(--hero-shadow-button-color);
+    border-radius: 4px;
+  }
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box-contact-form {
+  position: relative;
+  display: block;
+}
+
+.title-contact-form {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: var(--secondary-color);
+}
+.form-checkbox-policy {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+  .modal-form-title {
+    margin-bottom: 12px;
+  }
+  .form-checkbox-policy {
+    font-size: 14px;
+  }
+  .form-checkbox-link {
+    font-size: 14px;
+  }
+  .form-checkbox-won-icon {
+    margin-right: 9px;
+  }
+}
